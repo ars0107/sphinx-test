@@ -1,4 +1,4 @@
-import sphinx_bootstrap_theme
+from better import better_theme_path
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -89,8 +89,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'bootstrap'
-sphinx_bootstrap_theme.get_html_theme_path()
+html_theme = 'better'
+html_theme_path = [better_theme_path]
+
 # html_theme = 'alabaster'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -113,6 +114,7 @@ html_static_path = ['_static']
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 # html_sidebars = {
 #     '**': [
+#         'about.html',
 #         'navigation.html',
 #         'relations.html',  # needs 'show_related': True theme option to display
 #         'searchbox.html',
