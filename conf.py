@@ -1,5 +1,3 @@
-from better import better_theme_path
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
@@ -89,8 +87,9 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'better'
-html_theme_path = [better_theme_path]
+html_theme = 'alabaster'
+
+# Register the theme as an extension to generate a sitemap.xml
 
 # html_theme = 'alabaster'
 
@@ -98,9 +97,12 @@ html_theme_path = [better_theme_path]
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {
-#     'stickysidebar': 'true'
-# }
+html_theme_options = {
+    "fixed_sidebar": True,
+    "sidebar_width": "300px",
+    "font_family": "Arial, Helvetica, sans-serif",
+    "page_width": "1000px",
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -112,15 +114,15 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-# html_sidebars = {
-#     '**': [
-#         'about.html',
-#         'navigation.html',
-#         'relations.html',  # needs 'show_related': True theme option to display
-#         'searchbox.html',
-#         'donate.html',
-#     ]
-# }
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',  # needs 'show_related': True theme option to display
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
